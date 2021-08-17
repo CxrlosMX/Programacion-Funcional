@@ -3,6 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 package v4_transformar.clases;
 
 import v4_transformar.Funcion;
@@ -14,13 +15,13 @@ import v4_transformar.Funcion;
  * @Phone: 953-212-97-27
  * @Email: LuisCRendon131@gmail.com
  * @Date: 17/08/2021
- *
+ * 
  */
-public class Cuadrado implements Funcion {
+public class AlCubo implements Funcion{
 
     @Override
-    public Integer transformar(Integer n) {
-        return (int) (Math.pow(n, 2));
+    public Integer transformar(Integer valor) {
+    return (int)(Math.pow(valor,3));
     }
 
 }

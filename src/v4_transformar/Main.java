@@ -9,7 +9,8 @@ package v4_transformar;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import v4_transformar.clases.Cuadrado;
+import v4_transformar.clases.AlCubo;
+import v4_transformar.clases.Alcuadrado;
 
 /**
  *
@@ -43,8 +44,8 @@ public class Main {
         //2.-Quedarme solo con los pares
         List<Integer> filtrados = SuperFunciones.filtrar(numeros, new SoloPares());
         System.out.println(filtrados);
-        //3.-Pasar cada número al cuadrado
-        List<Integer> transformar = SuperFunciones.transformar(filtrados,new Cuadrado());
+        //3.-Obtener de cada número al cuadrado
+        List<Integer> transformar = SuperFunciones.transformar(filtrados,new AlCubo());
         System.out.println(transformar);
         // 4.-Mostrar cada cuadrado por pantalla
         List<Integer> mostrados = mostrarLista(transformar);
@@ -53,20 +54,7 @@ public class Main {
         System.out.println("Suma de Cuadrados: " + total);
     }
 
-    private List<Integer> crearLista() {
-        return Arrays.asList(0, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144);
-    }
-
-    private List<Integer> filtrarPares(List<Integer> numeros) {
-        List<Integer> resultado = new ArrayList<>();
-        //Recorro la Lista y se agrega a la lista resultado solo los numeros pares
-        for (Integer numero : numeros) {
-            if (numero % 2 == 0) {
-                resultado.add(numero);
-            }
-        }
-        return resultado;
-    }
+  
 
     private List<Integer> elevarAlCuadrado(List<Integer> numeros) {
         List<Integer> resultado = new ArrayList<>();

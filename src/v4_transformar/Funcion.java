@@ -10,6 +10,6 @@ package v4_transformar;
  * @author CxrlosMX
  */
 public interface Funcion {
-    Integer transformar(Integer n);
+    Integer transformar(Integer valor);
     
 }
